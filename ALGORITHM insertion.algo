@@ -1,0 +1,21 @@
+ALGORITHM insertion
+
+i=INTEGER;
+j=INTEGER;
+
+FUNCTION SORT(tab){
+  for(var i = 0; i < tab.length-1; i++){
+    
+    var min = i; 
+    for(var j = i+1; j < tab.length-2; j++){
+      if(tab[j] < tab[min]){
+      
+       min = j; 
+      }
+    }
+    var tmp = tab[i];
+    tab[i] = tab[min];
+    tab[min] = tmp;
+  }
+  return tab;
+};
